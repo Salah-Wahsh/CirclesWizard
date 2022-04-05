@@ -3,19 +3,31 @@ let score = 0;
 currIndex = 0;
 indexNew = 0;
 let totalScore=0;
-
+function check(){
+if ($('input[type=radio][name=form-check-label]:checked').length == 0){
+    console.log("check")
+}
+}
+// $("#wizard .actions a[href='#previous']").hide();
 $(function () {
     $("#wizard").steps({
+        
         headerTag: "h4",
         bodyTag: "section",
         transitionEffect: "fade",
         enableAllSteps: true,
         transitionEffectSpeed: 500,
+        onInit: function(event, currentIndex){
+            $("#wizard .actions a[href='#next']").hide();
+        },
         onStepChanging: function (event, currentIndex, newIndex) {
             currIndex = currentIndex;
             indexNew = newIndex;
             newIndex < currentIndex ? minusResult() : saveResult();
+            $("#wizard .actions a[href='#next']").hide();
             if (newIndex === 1) {
+                $("#wizard .actions a[href='#next']").hide();
+                check();
                 $(".steps ul").addClass("step-2");
             } else {
                 $(".steps ul").removeClass("step-2");
@@ -128,7 +140,8 @@ $(function () {
             $("#wizard-t-0").get(0).click();
             // $('#last').remove();
             // console.log("before score"+ score)
-          }
+          },
+          
     });
 
     // Custom Steps Jquery Steps
