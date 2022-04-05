@@ -1,0 +1,462 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Circles Quiz | اختبار الصيام</title>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
+          rel='stylesheet'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
+          rel='stylesheet'>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="./../js/fb_pixel.js"></script>
+    <script defer>
+        fbq('track', 'Lead');
+    </script>
+</head>
+
+<body oncontextmenu='return false' class='snippet-body'>
+<input type="hidden" id="selected-value" value="0"/>
+<!-- JQUERY STEP -->
+<div class="wrapper">
+    <form action="">
+        <div id="wizard">
+
+            <!-- Question 1 -->
+            <h4></h4>
+            <section>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q11">
+                    <label class="form-check-label" for="q11" onclick="selectValue(1)">
+                        سكر من النوع الاول
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q12"
+                           onclick="selectValue(0)">
+                    <label class="form-check-label" for="q12">
+                        سكر من النوع الثاني
+                    </label>
+                </div>
+
+
+            </section>
+            <!--Question 2 -->
+            <h4></h4>
+            <section>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                           id="flexRadioDefault1e"
+                           id="flexRadioDefault2" onclick="selectValue(2)">
+                    <label class="form-check-label" for="flexRadioDefault1e">
+                        من 10 سنوات أو أكثر
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                           id="flexRadioDefault2e"
+                           id="flexRadioDefault2" onclick="selectValue(2)">
+                    <label class="form-check-label" for="flexRadioDefault2e">
+                        أقل من 10 سنين
+                    </label>
+            </section> <!-- Question 3 -->
+            <h4></h4>
+            <section>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                           id="flexRadioDefault1c"
+                           id="flexRadioDefault2" onclick="selectValue(0)">
+                    <label class="form-check-label" for="flexRadioDefault1c">
+                        لا يوجد انخفاض في السكر طول الأسبوع
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                           id="flexRadioDefault2c"
+                           id="flexRadioDefault2" onclick="selectValue(1)">
+                    <label class="form-check-label" for="flexRadioDefault2c">
+                        أقل من مرة في الأسبوع
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                           id="flexRadioDefault3c"
+                           id="flexRadioDefault2" onclick="selectValue(3.5)">
+                    <label class="form-check-label" for="flexRadioDefault3c">
+                        أكتر من نوبة في الأسبوع
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                           id="flexRadioDefault4d"
+                           id="flexRadioDefault2" onclick="selectValue(5.5)">
+                    <label class="form-check-label" for="flexRadioDefault4d">
+                        كل ايام الأسبوع
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                           id="flexRadioDefault4l"
+                           id="flexRadioDefault2" onclick="selectValue(6.5)">
+                    <label class="form-check-label" for="flexRadioDefault4l">
+                        فقد الوعي بسببها
+                    </label>
+                </div>
+
+            </section> <!-- Question 4 -->
+            <h4></h4>
+            <section>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                           id="flexRadioDefault1"
+                           onclick="selectValue(0)">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        أقل من 9
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                           id="flexRadioDefault2"
+                           onclick="selectValue(1)">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        من 9 إلى 11.7
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                           id="flexRadioDefault3"
+                           onclick="selectValue(2)">
+                    <label class="form-check-label" for="flexRadioDefault3">
+                        أكبر من 11
+                    </label>
+                </div>
+
+
+            </section> <!-- Question 5 -->
+            <h4></h4>
+            <section>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q51"
+                           onclick="selectValue(0)">
+                    <label class="form-check-label" for="q51" style="font-size:13px;">
+                        أدوية لا تضمن عيلة الـ sulfonylurea (زي dimicron)
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q52"
+                           onclick="selectValue(5) ">
+                    <label class="form-check-label" for="q52" style="font-size:13px;">
+                        أدوية في صورة حبوب يحتوي على glimerpride زي amaryle
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q53"
+                           onclick="selectValue(1)">
+                    <label class="form-check-label" for="q53" style="font-size:13px;">
+                        أدوية تحتوي على glibenclamide
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q54"
+                           onclick="selectValue(1.5)">
+                    <label class="form-check-label" for="q54" style="font-size:13px;">
+                        أنسولين طويل المفعول زي Tresiba أو Lantus أو Levemir أو Toujeo
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q55"
+                           onclick="selectValue(2)">
+                    <label class="form-check-label" for="q55" style="font-size:13px;">
+                        جرعه واحدة من انسولين ميكس تارد mixtard 30/70 او 50/50
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q56"
+                           onclick="selectValue(2.5)">
+                    <label class="form-check-label" for="q56" style="font-size:13px;">
+                        مضخة انسولين او نظام يستخدم قلمين من الانسولين
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q57"
+                           onclick="selectValue(3)">
+                    <label class="form-check-label" for="q57" style="font-size:13px;">
+                        مضخة انسولين او نظام يستخدم قلمين من الانسولين
+                    </label>
+                </div>
+
+
+            </section> <!-- Question 6 -->
+            <h4></h4>
+            <section>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q61"
+                           onclick="selectValue(0)">
+                    <label class="form-check-label" for="q61">
+                        بيقيسه زي ما مطلوب منه
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q62"
+                           onclick="selectValue(1)">
+                    <label class="form-check-label" for="q62">
+                        بيقيسه بس مش بانتظام
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q63"
+                           onclick="selectValue(2)">
+                    <label class="form-check-label" for="q63">
+                        مش بيقيسه خالص
+                    </label>
+
+            </section> <!-- Question 7 -->
+            <h4></h4>
+            <section>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q71"
+                           onclick="selectValue(0)">
+                    <label class="form-check-label" for="q71">
+                        لا
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q72"
+                           onclick="selectValue(1)">
+                    <label class="form-check-label" for="q72">
+                        نعم، في آخر سنة
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q73"
+                           onclick="selectValue(2)">
+                    <label class="form-check-label" for="q73">
+                        نعم، منذ أقل من 6 شهور
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q74"
+                           onclick="selectValue(3)">
+                    <label class="form-check-label" for="q74">
+                        نعم، منذ أقل من 3 شهور
+
+                    </label>
+                </div>
+
+            </section> <!-- Question 8 -->
+            <h4></h4>
+            <section>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q81"
+                           onclick="selectValue(2)">
+                    <label class="form-check-label" for="q81">
+                        لا
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q82"
+                           onclick="selectValue(2)">
+                    <label class="form-check-label" for="q82">
+                        نعم، ذبحة صدرية
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q83"
+                           onclick="selectValue(2)">
+                    <label class="form-check-label" for="q83">
+                        نعم، احتشاء في عضلة القلب
+
+                    </label>
+                </div>
+
+            </section> <!-- Question 9 -->
+            <h4></h4>
+            <section>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q91"
+                           onclick="selectValue(0)">
+                    <label class="form-check-label" for="q91">
+                        eGFR ( ترشيح الكلى ) أكبر من 60
+
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q92"
+                           onclick="selectValue(2)">
+                    <label class="form-check-label" for="q92">
+                        eGFR ( ترشيح الكلى ) من إلى 60
+
+
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q93"
+                           onclick="selectValue(4)">
+                    <label class="form-check-label" for="q93">
+                        eGFR ( ترشيح الكلى ) من 30-45
+
+
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q94"
+                           onclick="selectValue(6.5)">
+                    <label class="form-check-label" for="q94">
+                        eGFR ( ترشيح الكلى ) أقل من 30
+
+                    </label>
+                </div>
+
+            </section> <!-- Question 10 -->
+            <h4></h4>
+            <section>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q101"
+                           onclick="selectValue(0)">
+                    <label class="form-check-label" for="q101">
+                        لا يوجد
+
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q102"
+                           onclick="selectValue(3.5)">
+                    <label class="form-check-label" for="q102">
+                        نعم، مع المحافظة على معدلات النمو المطمئنة
+                        مع عدم وجود ضغط أو سكر أو مشاكل مرتبطة بالحمل
+
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q103"
+                           onclick="selectValue(6.5)">
+                    <label class="form-check-label" for="q103">
+                        أي مشاكل مرتبطة بالحمل
+                    </label>
+                </div>
+
+
+            </section> <!-- Question 11 -->
+            <h4></h4>
+            <section>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q111"
+                           onclick="selectValue(0)">
+                    <label class="form-check-label" for="q111">
+                        لا يوجد
+
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q112"
+                           onclick="selectValue(3.5)">
+                    <label class="form-check-label" for="q112">
+                        أكبر من 70 سنة ولا يوجد مرافق
+
+
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q113"
+                           onclick="selectValue(6.5)">
+                    <label class="form-check-label" for="q113">
+                        يوجد نسيان أو خرف
+
+                    </label>
+                </div>
+
+            </section> <!-- Question 12 -->
+            <h4></h4>
+            <section>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q121"
+                           onclick="selectValue(0)">
+                    <label class="form-check-label" for="q121">
+                        لا يوجد
+
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q122"
+                           onclick="selectValue(2)">
+                    <label class="form-check-label" for="q122">
+                        يوجد ويحتاج إلى قوة بدنية متوسطة
+
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q123"
+                           onclick="selectValue(4)">
+                    <label class="form-check-label" for="q123">
+                        يوجد ويحتاج إلى قوة بدنية عالية الشدة
+                    </label>
+                </div>
+
+            </section> <!-- Question 13 -->
+            <h4></h4>
+            <section>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q131"
+                           onclick="selectValue(0)">
+                    <label class="form-check-label" for="q131">
+                        جيد بدون أي مشاكل صحية
+
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q132"
+                           onclick="selectValue(1)">
+                    <label class="form-check-label" for="q132">
+                        لم يكن جيد أو واجهت مشاكل
+
+                    </label>
+                </div>
+
+
+            </section> <!-- Question 14 -->
+            <h4></h4>
+            <section>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q141"
+                           onclick="selectValue(0)">
+                    <label class="form-check-label" for="q141">
+
+                        أقل من 16 ساعة
+
+                    </label>
+                </div>
+                <div class="form-row">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="q142"
+                           onclick="selectValue(1)">
+                    <label class="form-check-label" for="q142">
+                        أكبر من أو يساوي 16 ساعة
+
+                    </label>
+                </div>
+
+                <!--  -->
+            </section>
+            <h4></h4>
+            <section>
+                <div id="last">
+                </div>
+                <p class="success"></p>
+            </section>
+        </div>
+    </form>
+</div>
+
+<script type='text/javascript'
+        src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js"></script>
+<script type='text/javascript'
+        src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+<script src="../js/script.js"></script>
+<footer class="footer">
+    <p>Copyright 2022, belongs to <strong>@Codebase</strong></p>
+</footer>
+</body>
+</html>
