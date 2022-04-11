@@ -13,6 +13,7 @@
 }
 
 body {
+  direction: rtl;
   background: url(../pics/footer_bg.jpg);
   /* font-family: "Poppins-Regular"; */
   font-family: main-font , 'Poppins', sans-serif;
@@ -131,7 +132,7 @@ img {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  height: 70vh;
+  height: 60vh;
   width: 50%;
   padding: 4%;
   border-radius: 20px;
@@ -171,7 +172,7 @@ img {
 
 .steps ul:before {
 
-  content: ":نوع السكر";
+  content: "إيه نوع السكر اللي بتعاني منه؟";
   font-size: 22px;
   font-family: "Poppins-SemiBold";
   color: #333;
@@ -189,46 +190,46 @@ img {
 }
 
 .steps ul.step-2:before {
-  content: ":المدة (تعاني من السكر منذ )"
+  content: "بقالك اد إيه؟"
 }
 
 .steps ul.step-3:before {
-  content: ":وجود اعراض انخفاض في السكر"
+  content: "هل عانيت من اعراض انخفاض في السكر؟"
 }
 .steps ul.step-4:before {
-  content: ":مستوى السكر التراكمي في الدم"
+  content: "إيه مستوى السكر التراكمي في الدم؟"
 }
 .steps ul.step-5:before {
-  content: ":العلاج"
+  content: "شاركنا أدويتك؟"
 }
 .steps ul.step-6:before {
   font-size: 18px;
   content: "هل طلب الأخصائي منك مراقبة السكر يوميا؟ أو تركيب جهاز قراءة سكر يومي؟"
 }
 .steps ul.step-7:before {
-  content: "هل مريت بأي مشاكل حادة للسكر؟"
+  content: "هل مريت بأي مشاكل حادة للسكر؟ ( زي:غيبوبة ارتفاع سكر)"
 }
 .steps ul.step-8:before {
   font-size: 19px;
-  content: "هل تعاني من مشاكل عضلة القلب(مرتبطة بالسكر)"
+  content: "هل تعاني من مشاكل عضلة القلب (مرتبطة بالسكر)"
 }
 .steps ul.step-9:before {
   content: "هل يوجد مضاعفات فى الكلى(مصاحبة لمرض السكر)"
 }
 .steps ul.step-10:before {
-  content: "الحمل"
+  content: "هل يوجد حمل؟"
 }
 .steps ul.step-11:before {
   content: "الواظائف الدماغية/الخرف"
 }
 .steps ul.step-12:before {
-  content: "عمل يتضمن مجهود متوسط"
+  content: "طبيعه عملي تتضمن مجهود متوسط"
 }
 .steps ul.step-13:before {
-  content: "الصيام في رمضان سابقا"
+  content: "الصيام في رمضان سابقًا"
 }
 .steps ul.step-14:before {
-  content: "مدة الصيام حسب البلد"
+  content: "ما هي مدة الصيام حسب بلد اقامتك؟"
 }
 .steps ul.step-15:before {
   content: "النتيجه"
