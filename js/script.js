@@ -15,7 +15,13 @@ $(function () {
         transitionEffectSpeed: 500,
         onInit: function(event, currentIndex){
             $("#wizard .actions a[href='#next']").hide();
+            $("#wizard .actions a[href='#previous']").hover(function(){
+                $(this).css("background-color", "#B86566");
+                }, function(){
+                $(this).css("background-color", "#808080");
+              });
         },
+        
         onStepChanging: function (event, currentIndex, newIndex) {
             currIndex = currentIndex;
             indexNew = newIndex;

@@ -13,7 +13,6 @@
 }
 
 body {
-  direction: rtl;
   background: url(../pics/footer_bg.jpg);
   /* font-family: "Poppins-Regular"; */
   font-family: main-font , 'Poppins', sans-serif;
