@@ -170,7 +170,7 @@ img {
 }
 
 .steps ul:before {
-
+direction: rtl;
   content: "إيه نوع السكر اللي بتعاني منه؟";
   font-size: 22px;
   font-family: "Poppins-SemiBold";
@@ -748,8 +748,8 @@ textarea.form-control {
   }
 
   .steps ul:before {
-
-    content: ":نوع السكر";
+direction: rtl;
+    content: "إيه نوع السكر اللي بتعاني منه؟";
     font-size: 18px;
     font-family: "Poppins-SemiBold";
     color: #333;

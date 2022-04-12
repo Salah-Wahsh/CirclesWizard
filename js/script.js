@@ -20,7 +20,16 @@ $(function () {
                 }, function(){
                 $(this).css("background-color", "#808080");
               });
+            //   $("#wizard-t-4").click(function(){
+            //     $(".steps ul").addClass("step-2");
+            //   })
+            // for (let i = 0; i < steps.length; i++) {
+            //     $("#wizard-t-"+i).off('click');
+            //   }
+            $("#wizard-t-4").css(" cursor: not - allowed; pointer - events: none;")
+            
         },
+        
         
         onStepChanging: function (event, currentIndex, newIndex) {
             currIndex = currentIndex;
@@ -29,11 +38,15 @@ $(function () {
             $("#wizard .actions a[href='#next']").hide();
             if (newIndex === 1) {
                 $("#wizard .actions a[href='#next']").hide();
+                $("#wizard .actions a[href='#previous']").click (function(){
+                    $("#wizard .actions a[href='#next']").show();
+                  })
                 $(".steps ul").addClass("step-2");
             } else {
                 $(".steps ul").removeClass("step-2");
             }
             if (newIndex === 2) {
+                
                 $(".steps ul").addClass("step-3");
             } else {
                 $(".steps ul").removeClass("step-3");
@@ -174,15 +187,15 @@ function startSession(){
     sessionStorage.setItem("userScore", totalScore);
     var i;
 
-console.log("local storage");
-for (i = 0; i < localStorage.length; i++)   {
-    console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
-}
+// console.log("local storage");
+// for (i = 0; i < localStorage.length; i++)   {
+//     console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
+// }
 
-console.log("session storage");
-for (i = 0; i < sessionStorage.length; i++) {
-    console.log(sessionStorage.key(i) + "=[" + sessionStorage.getItem(sessionStorage.key(i)) + "]");
-}
+// console.log("session storage");
+// for (i = 0; i < sessionStorage.length; i++) {
+//     console.log(sessionStorage.key(i) + "=[" + sessionStorage.getItem(sessionStorage.key(i)) + "]");
+// }
 
 }
 function selectValue(score) {
