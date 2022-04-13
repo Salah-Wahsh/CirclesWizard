@@ -4,7 +4,6 @@ currIndex = 0;
 indexNew = 0;
 let totalScore=0;
 
-// $("#wizard .actions a[href='#previous']").hide();
 $(function () {
     $("#wizard").steps({
         
@@ -13,6 +12,8 @@ $(function () {
         transitionEffect: "fade",
         enableAllSteps: true,
         transitionEffectSpeed: 500,
+
+        //To hide the next button and toggle animation and disable progress bar clicking on page loading
         onInit: function(event, currentIndex){
             $("#wizard .actions a[href='#next']").hide();
             $("#wizard .actions a[href='#previous']").hover(function(){
@@ -20,17 +21,11 @@ $(function () {
                 }, function(){
                 $(this).css("background-color", "#808080");
               });
-            //   $("#wizard-t-4").click(function(){
-            //     $(".steps ul").addClass("step-2");
-            //   })
-            // for (let i = 0; i < steps.length; i++) {
-            //     $("#wizard-t-"+i).off('click');
-            //   }
             $("#wizard-t-4").css(" cursor: not - allowed; pointer - events: none;")
             
         },
         
-        
+        //step counter to load next question
         onStepChanging: function (event, currentIndex, newIndex) {
             currIndex = currentIndex;
             indexNew = newIndex;
@@ -124,7 +119,6 @@ $(function () {
             if (newIndex === 13) {
                 $(".steps ul").addClass("step-14");
                 $(".actions ul").addClass("step-last");
-                // $('#wizard').find('a[href="#finish"]').remove();
 
             } else {
                 $(".steps ul").removeClass("step-14");
@@ -134,9 +128,10 @@ $(function () {
                 totalScore=getTotalScore();
                 console.log("total"+ totalScore)
                 startSession();
+                //pass the final score to the score page and load score page
                 window.location.replace("../pages/score.html");
-                $(".steps ul").addClass("step-15");
-                $(".actions ul").addClass("step-last");
+                // $(".steps ul").addClass("step-15");
+                // $(".actions ul").addClass("step-last");
                 
             } else {
                 $(".steps ul").removeClass("step-15");
@@ -152,8 +147,7 @@ $(function () {
         },
         onFinished: function (event, currentIndex) {
             $("#wizard-t-0").get(0).click();
-            // $('#last').remove();
-            // console.log("before score"+ score)
+        
           },
           
     });
@@ -174,10 +168,10 @@ $(function () {
         $("#wizard").steps("previous");
     });
     // Checkbox
-    $(".checkbox-circle label").click(function () {
-        $(".checkbox-circle label").removeClass("active");
-        $(this).addClass("active");
-    });
+    // $(".checkbox-circle label").click(function () {
+    //     $(".checkbox-circle label").removeClass("active");
+    //     $(this).addClass("active");
+    // });
     $(document).on('change', 'input[name="flexRadioDefault"]', function () {
         $("#wizard").steps("next");
     })
@@ -186,16 +180,6 @@ $(function () {
 function startSession(){
     sessionStorage.setItem("userScore", totalScore);
     var i;
-
-// console.log("local storage");
-// for (i = 0; i < localStorage.length; i++)   {
-//     console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
-// }
-
-// console.log("session storage");
-// for (i = 0; i < sessionStorage.length; i++) {
-//     console.log(sessionStorage.key(i) + "=[" + sessionStorage.getItem(sessionStorage.key(i)) + "]");
-// }
 
 }
 function selectValue(score) {
