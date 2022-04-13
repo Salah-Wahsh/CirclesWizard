@@ -147,7 +147,7 @@ $(function () {
         },
         labels: {
             next: "التالى",
-            previous: " ",
+            previous: "السابق",
             finish: "اعادة الاختبار",
         },
         onFinished: function (event, currentIndex) {
