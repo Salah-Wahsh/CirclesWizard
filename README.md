@@ -1,5 +1,5 @@
 # Circles Wizard
-deployed website: https://salah-wahsh.github.io/WeatherNow/
+deployed website: https://salah-wahsh.github.io/CirclesWizard/
 
 ## Overview
 - A web application that helps the people with diabetes to decide wether they can fast during ramadan or not,
