@@ -1,13 +1,14 @@
 # Circles Wizard
+deployed website: https://salah-wahsh.github.io/WeatherNow/
 
 ## Overview
 - A web application that helps the people with diabetes to decide wether they can fast during ramadan or not,
    by asking a specefic questions that indicates the overall wellbeing of the diabetes patient.
 
 ## User Features
--users answer some questions that are written by doctors.
--at the end user get a final score and descion wether they can: fast, not fast, or preferrably go see a doctor for better descion making
-
+- Users answer some questions that are written by doctors.
+- At the end user get a final score and descion wether they can: fast, not fast, or preferrably go see a doctor for better descion making
+ 
 ## Setup and Installation
 - install jquery.
 
